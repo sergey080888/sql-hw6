@@ -78,4 +78,4 @@ def publisher_shop(class_):
 if __name__ == "__main__":
 
     publisher_data(Publisher)
-    # publisher_shop(Publisher)
+    publisher_shop(Publisher)
