@@ -27,18 +27,18 @@ book1 = Book(title='Our world', publisher=publisher1)
 book2 = Book(title='Hero life', publisher=publisher2)
 book3 = Book(title='ME', publisher=publisher3)
 session.add_all([book1, book2, book3])
-session.commit()
+
 
 shop1 = Shop(name='PUD')
 shop2 = Shop(name='Yabloko')
 session.add_all([shop1, shop2])
-session.commit()
+
 
 stock1 = Stock(book=book1, shop=shop2, count=10)
 stock2 = Stock(book=book3, shop=shop2, count=5)
 stock3 = Stock(book=book2, shop=shop1, count=1)
 session.add_all([stock3, stock2, stock1])
-session.commit()
+
 
 sale1 = Sale(price='100.8', data_sale="2022-10-25T09:45:24.552Z", stock=stock1, count=2)
 sale2 = Sale(price='50.5', data_sale="2022-10-25T09:45:24.552Z", stock=stock1, count=4)
