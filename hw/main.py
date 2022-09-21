@@ -47,32 +47,33 @@ session.commit()
 
 session.close()
 
+
 def publisher_data(class_):
-    id = input('Введите id издателя:')
+    id_ = input('Введите id издателя:')
     name = input('Введите name издателя:')
-    if id:
-        for c in session.query(class_).filter(class_.id == id).all():
+    if id_:
+        for c in session.query(class_).filter(class_.id == id_).all():
             print(c)
 
     elif name:
         for c in session.query(class_).filter(class_.name == name).all():
             print(c)
 
+
 def publisher_shop(class_):
-    id = input('Введите id издателя:')
+    id_ = input('Введите id издателя:')
     name = input('Введите name издателя:')
     query = session.query(Shop)
     query = query.join(Stock)
     query = query.join(Book)
     query = query.join(Publisher)
     if id:
-        for c in query.filter(class_.id == id).all():
+        for c in query.filter(class_.id == id_).all():
             print(c)
 
     elif name:
         for c in query.filter(class_.name == name).all():
             print(c)
-
 
 
 if __name__ == "__main__":
