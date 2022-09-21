@@ -4,7 +4,7 @@ from models import create_tables, Publisher, Shop, Sale, Book, Stock
 
 
 login = 'postgres'
-password = '1988'
+password = ''
 host_name = "localhost:5432"
 data_base_name = 'netology_db'
 DSN = f'postgresql://{login}:{password}@{host_name}/{data_base_name}'
